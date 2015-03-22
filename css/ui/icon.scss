@@ -1,0 +1,57 @@
+@charset "utf-8";
+//过期 积分
+.point-expired{
+  background-size:  15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point-expired.png");
+  background-image: url("../img/icon/point-expired.svg"),none;
+//  vertical-align: middle;
+}
+
+//当前积分
+.point{
+  background-size:  15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point.png");
+  background-image: url("../img/icon/point.svg"),none;
+//  vertical-align: middle;
+}
+
+//商店
+.shop{
+  background-size:  18.5px 17.5px;
+  width: 18.5px;
+  height: 17.5px;
+  background-image: url("../img/icon/shop.png");
+//  background-image: url("../img/icon/shop.svg"),none;
+}
+
+
+//地址
+.geo-location{
+  background-size:  rem(30px) rem(38px);
+  width: rem(30px);
+  height: rem(38px);
+  background-image: url("../img/icon/location.png");
+  background-image: url("../img/icon/location.svg"),none;
+}
+
+
+
+//loading
+.spinner-svg-small{
+  width: 25px;
+  height: 25px;
+  svg{
+    stroke:#405d9e;
+    fill: #405d9e;
+  }
+  &.important{
+    svg{
+      stroke:#f69e47;
+      fill: #f69e47;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/**
+* sherlock221b
+*/
+
+
+
+//详情部分
+.detail-body{
+
+
+  margin-top: rem(44px);
+  padding-left: rem(30px);
+  padding-right: rem(28px);
+
+  padding-bottom: rem(100px);
+
+  .tips{
+    margin-bottom: rem(223px);
+  }
+
+  ul.list{
+    li{
+      margin-bottom: rem(28px);
+
+      label{
+        font-size: 16px;
+        margin-right: rem(30px);
+      }
+      span{
+        color: #919191;
+        font-size: 15px;
+      }
+    }
+  }
+  .detail-wrap-text{
+    display: block;
+    margin-left: 87px;
+    position: relative;
+    top: 2px;
+
+  }
+
+}
+
+
+
+.detail-header{
+  padding: rem(25px) 0;
+  padding-left: rem(30px);
+  padding-right: rem(28px);
+  background: #ffffff;
+
+  h3{
+    font-size: rem(34px);
+    margin-bottom: 5px;
+  }
+
+  span{
+  }
+}
+
+.detail-change{
+  padding-left: rem(30px);
+  padding-right: rem(28px);
+
+  background: #ffffff;
+  padding: rem(21px);
+
+  .color-og{
+    font-size: 18px;
+  }
+}
+
+.pointMs{
+  position: relative;
+  top: 6px;
+  display: inline-block;
+}

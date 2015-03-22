@@ -1,0 +1,94 @@
+@charset "utf-8";
+/**
+* sherlock221b
+*/
+
+
+//知了button设计
+button.ca-sm{
+  font-size: 15px;
+  height: rem(64px);
+  line-height: rem(64px);
+  padding: 0;
+  width: rem(182px);
+  min-width: rem(182px);
+  min-height: rem(64px);
+  border-radius: 4px;
+}
+
+button.ca-bg{
+  height: rem(88px);
+  line-height: rem(88px);
+  width: rem(548px);
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+  min-width: rem(548px);
+  min-height: rem(88px);
+  border-radius: 4px;
+}
+
+button:disabled{
+  background-color: #aaaaaa !important;
+  border-color: #aaaaaa !important;
+  opacity: 1 !important;
+}
+
+
+
+//form
+.form-title{
+  font-size: 18px;
+  padding-top: rem(28px);
+  padding-bottom: rem(24px);
+  padding-left: rem(30px);
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #c6cbce;
+}
+
+form .form-text{
+  font-size: 18px;
+  color: #8d8d8d;
+  border:  0 none;
+  border-bottom: 1px solid #c6cbce;
+
+  padding: 0px rem(30px);
+  height: rem(90px);
+  line-height: rem(90px);
+
+  background: #ffffff;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none !important;
+  -webkit-box-shadow : none !important;
+  outline: 0 none;
+}
+
+.form-tips{
+  color: #a2a1a1;
+  padding-right: 12px;
+  font-size: 12px;
+
+  &.helper{
+    margin-top: rem(21px);
+    margin-bottom: rem(75px);
+  }
+}
+
+.form-group{
+
+}
+
+
+//知了radio 设计
+.ca-radio{
+
+  &.checkbox input:checked:before, &.checkbox input:checked + .checkbox-icon:before{
+    background: #f59854;
+    border-color: #f59854;
+  }
+
+
+}
+

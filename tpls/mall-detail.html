@@ -1,0 +1,78 @@
+
+
+
+<ion-view  cache-view="false" view-title="商品详情">
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon  icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.list');">  </button>
+        <h1 class="title">商品详情</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header detail">
+
+        <div>
+            <img-lazy width="100%"  auto="2.027">
+                <img  ng-src="{{post.bigImage}}" class="full-image block" />
+            </img-lazy>
+
+        </div>
+
+        <div class="detail-header">
+            <h3>{{post.productionName}} {{post.type}}</h3>
+                <span class="color-og">
+                    兑换截止日期:&emsp;{{post.comment.time}}
+                </span>
+        </div>
+        <section class="detail-body">
+            <div>
+
+
+                <ul class="list">
+                    <li>
+                        <label>使用范围:</label>
+                        <span> {{post.comment.range}}</span>
+                    </li>
+                    <li>
+                        <label>到账时间:</label>
+                        <span> {{post.comment.arrtive}}</span>
+                    </li>
+                    <li>
+                        <label class="" style=" float: left;">兑换流程:</label>
+                        <span class="detail-wrap-text"> {{post.comment.exchange}}</span>
+                    </li>
+
+                    <li>
+                        <label class="" style=" float: left;">备注:</label>
+                        <span class="detail-wrap-text"> {{post.comment.desc}}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--<div class="tips">-->
+            <!--<span class="color-og">-->
+                <!--知了节省您的精力！由我们实时服务为您充值，您只需在收到短信提醒后动动手指头查看兑换状态即可。-->
+            <!--</span>-->
+            <!--</div>-->
+
+        </section>
+
+
+
+    </ion-content>
+    <div class="detail-change clearfix" style="position: fixed; bottom: 0px; width: 100%;">
+        <div class="pull-left">
+            <span class="color-og pointMs">
+                <i class="ib point t2" style="margin-right: 8px;"></i>
+                <span class="ib ">{{post.credit}}</span>
+            </span>
+        </div>
+
+        <div class="pull-right">
+            <button class="button button-energized ca-sm" ng-click="goPage()"  ng-disabled="notExchange">
+                {{isExchangeMsg}}
+            </button>
+        </div>
+
+    </div>
+</ion-view>

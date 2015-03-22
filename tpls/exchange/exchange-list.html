@@ -1,0 +1,66 @@
+
+<ion-view view-title="兑换纪录" >
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon  icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.list');">  </button>
+        <h1 class="title">兑换纪录</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content   class="has-header exchange"  ng-controller="MallExchangeCtrl">
+
+
+        <div class="text-center tips animated fadeInDown"  ng-if="isNotProduct"  >
+            <div >
+                <img src="img/tips.png"  class="tips-img ib" />
+            </div>
+            <div>
+                <span class="tips-header">您还没有兑换过商品</span>
+            </div>
+            <div>
+                <span class="tips-content">快去知了商城兑换吧</span>
+            </div>
+        </div>
+
+
+
+        <!-- 下拉刷新 -->
+        <ion-refresher  pulling-text="" on-refresh="refresh()" spinner="ios" refreshing-icon="ion-loading-d">  </ion-refresher>
+
+        <style type="text/css">
+            .my-item {
+                left: 0;
+                right: 0;
+            }
+        </style>
+        <ion-list class="exchangeList">
+
+            <!--<a class="item my-item item-thumbnail-left item-icon-right"  ng-click="getDetail(post)" collection-repeat="post in posts" collection-item-width="'100%'"  collection-item-height="'100px'"  >-->
+            <ion-item  class="item-thumbnail-left item-icon-right"   ng-click="getDetail(post)"  ng-repeat="post in posts">
+                <img  ng-src="{{
+                post.image}}"  class="full-image"      />
+                <h2 class="exchangeName">{{post.productionName}}</h2>
+                <div>
+                        <span class="ib point-expired t2" ></span><span class="mail-point color-gray-light">{{post.credit}}</span>
+                </div>
+                <div>
+                    <span class="ib exchangeStatus "  ng-class="{'color-og':post.status=='0','color-gray-light' : post.status == '1'  }">{{post.status |  exchangeStatus : post.productionType }}</span>
+                </div>
+
+                <i class="  icon ion-chevron-right  f18  color-gray" ng-hide="post.isSubmit"></i>
+                <i class=" ion-loading-d icon f18" ng-show="post.isSubmit"></i>
+            </ion-item>
+                <!--</a>-->
+        </ion-list>
+
+
+
+        <!-- 上拉加载 -->
+        <ion-infinite-scroll  ng-if="isMore"  icon="ion-ios7-reloading"   spinner="lines"   on-infinite="loadMore()" distance="1%" >  </ion-infinite-scroll>
+
+    </ion-content>
+
+
+
+
+</ion-view>

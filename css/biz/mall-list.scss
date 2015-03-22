@@ -1,0 +1,105 @@
+@charset "utf-8";
+/**
+* sherlock221b
+* 商城列表部分
+*/
+
+
+
+.mall{
+  color: #494949;
+}
+
+
+.my-creadit-load{
+  position: absolute;
+  right: 27px;
+  top: -3px;
+}
+//选择导航部分
+.mall-nav{
+  background: #f6f6f6;
+  text-align: center;
+  a{
+    color: #909090;
+    font-size: 15px;
+    padding: 13px 0;
+  }
+  .value{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+
+//兑换列表
+.mall-icon{
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+
+  a{
+    padding-top: rem(64px);
+    padding-bottom: rem(41px);
+    border-bottom: 1px solid #e8e8e8;
+
+    //最小高度
+    min-height: 178px;
+    position: relative;
+
+  }
+  .float_two:nth-child(2n) a{
+    border-left: 1px solid #e8e8e8;
+  }
+
+  .mail-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #494949;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .mail-base{
+    display: inline-block;
+    text-align: left;
+  }
+
+
+}
+.mail-point{
+  font-size: 16px;
+  color: #f69e47;
+  display: inline-block;
+  //  position: relative;
+  //  top: 2px;
+  //  vertical-align: middle;
+  margin-left: 7.5px;
+}
+.detail{
+  background: #f6f6f6;
+}
+
+
+.shop-main{
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  width: 100%;
+}
+
+
+
+
+/** 滑块的hack **/
+.slider-slides{
+}
+
+//修改轮播按钮
+.slider-pager{
+  bottom: 11px;
+}
+.slider-pager-page{
+  .ion-record{
+    font-size: 10px;
+  }
+}

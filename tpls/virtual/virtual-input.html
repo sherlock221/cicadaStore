@@ -1,0 +1,37 @@
+
+
+<ion-view  cache-view="false" view-title="输入号码">
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.detail');">  </button>
+        <h1 class="title">输入号码</h1>
+    </div>
+
+
+    <!--内容区-->
+    <ion-content class="has-header bg-gray" scroll="false">
+            <form  role="form"   name="inputForm"  novalidate>
+
+
+                <div class="form-group">
+                    <label class="form-title">
+                        输入手机号
+                    </label>
+                    <div>
+                        <input type="tel"   class="form-text item-input"  placeholder="手机号"   ng-model="fm.phone" required/>
+                    </div>
+
+                    <div class="form-tips text-right helper">
+                        <span>本活动最终解释权归北京蝉鸣信息公司所属</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="button button-energized ca-bg" ng-click="exchange();" ng-disabled="inputForm.$invalid || isSubmit ">确定</button>
+                </div>
+            </form>
+
+
+    </ion-content>
+
+</ion-view>

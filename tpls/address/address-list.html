@@ -1,0 +1,71 @@
+
+<ion-view view-title="确认收货地址" class="bg-view-gray" >
+
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon  icon ion-ios7-arrow-back"   ng-click="$root.back();">  </button>
+        <h1 class="title">确认收货地址</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header exchange "  delegate-handle="addressListScroll">
+
+    <form role="form" novalidate>
+        <ul class="list address-list">
+            <li class="item" ng-repeat="post in posts">
+                <div class="item-content ">
+                   <div class="row row-center">
+                       <div class="col" >
+                           <div class="address-user">
+                               <label>收货人:</label>
+                               <span>{{post.userName}}</span>
+                           </div>
+                           <div class="address-phone">
+                               <label>手机号码:</label>
+                               <span>{{post.phone}}</span>
+                           </div>
+                           <div class="address-desc">
+                               <label class="vt">收获地址:</label>
+                               <span class="ib">
+                                    <div>
+                                        {{post.provice}} {{post.city}} {{post.district}}
+                                    </div>
+                                   <div>
+                                       {{post.street}}
+                                   </div>
+                               </span>
+                           </div>
+                       </div>
+
+                           <label class="checkbox ca-radio">
+                               <input type="radio" name="address" ng-model="fm.currentAddress" value="{{post.id}}">
+                           </label>
+
+
+
+
+                       </label>
+
+                   </div>
+                </div>
+            </li>
+
+        </ul>
+
+
+        <ul class="list address-href">
+            <li class="item" ng-click="$root.go('mall.address.add')">
+                 <a href="javascript:void(0)"><i class="ib ion-plus-round ion "></i>使用新的收货地址</a>
+            </li>
+        </ul>
+
+        <div class="text-center mtb40">
+            <button class="button button-energized ca-bg" ng-click="exchange()">确定</button>
+        </div>
+
+    </form>
+    </ion-content>
+
+
+
+</ion-view>

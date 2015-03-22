@@ -1,0 +1,111 @@
+
+<ion-view view-title="兑换详情" >
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon  icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.exchange');">  </button>
+        <h1 class="title">兑换详情</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header" >
+       <div id="exchangeDetail">
+
+            <ul class="list exchangeList">
+                <li class="item item-thumbnail-left item-icon-right">
+                    <img  ng-src="{{post.exchangeLog.image}}"  class="full-image"      />
+                    <h2 class="exchangeName">{{post.exchangeLog.productionName}}</h2>
+                    <div>
+                        <span class="ib point t2" ></span><span class="mail-point color-og-light">{{post.exchangeLog.credit}}</span>
+                    </div>
+                    <i class="  icon ion-chevron-right  f18  color-gray"></i>
+                </li>
+            </ul>
+
+           <div class="block-exchangeDetail"></div>
+
+            <div class="exchangeDetail-desc">
+
+                <!-- 电子卷 -->
+                <div ng-if="post.electronic">
+
+                    <h5 class="title">{{post.exchangeLog.status | exchangeStatus : "3"}}</h5>
+                    <div class="desc">
+                        <ul class="list" >
+                            <li>
+                                <label>兑换号码:</label>
+                                <span> {{post.electronic.password}}</span>
+                            </li>
+                            <li>
+                                <label>使用时间:</label>
+                                <span> {{post.electronic.startTime | date : 'yyyy-MM-dd' }} 至 {{post.electronic.endTime | date : 'yyyy-MM-dd'  }} 截止</span>
+                            </li>
+                        </ul>
+
+                        <div class="text-center shopUrl">
+                            <a class="block" ng-href="{{post.electronic.shopUrl}}" >
+                                <button class="button button-energized ca-bg">前往店铺</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 实物 -->
+                <div ng-if="post.address">
+                    <h5 class="title">{{post.exchangeLog.status | exchangeStatus : "1"}}</h5>
+                    <div class="desc">
+                        <ul class="list" >
+                            <li>
+                                <label>收货人:</label>
+                                <span> {{post.address.userName}}</span>
+                            </li>
+                            <li>
+                                <label>收货地址:</label>
+                                <span> {{post.address.provice}}{{post.address.city}}{{post.address.district}}{{post.address.street}}</span>
+                            </li>
+                            <li>
+                                <label>运单号码:</label>
+                                <span> {{post.exchangeLog.comment}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- 话费 -->
+                <div ng-if="post.input">
+                    <h5 class="title">{{post.exchangeLog.status | exchangeStatus : "4"}}</h5>
+                    <div class="desc">
+                        <ul class="list" >
+                        <li>
+                            <label>充值号码:</label>
+                            <span> {{post.address.userName}}</span>
+                        </li>
+                        <li>
+                            <label>收货地址:</label>
+                            <span> {{post.address.provice}}{{post.address.city}}{{post.address.district}}{{post.address.street}}</span>
+                        </li>
+                        <li>
+                            <label>运单号码:</label>
+                            <span> {{post.exchangeLog.comment}}</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+
+
+
+       </div>
+
+
+
+
+    </ion-content>
+
+
+
+</ion-view>

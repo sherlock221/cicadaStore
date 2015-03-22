@@ -1,0 +1,66 @@
+@charset "utf-8";
+/**
+* sherlock221b
+*/
+
+
+
+//地址管理
+.address-list {
+
+  .item {
+    margin-top: rem(40px);
+  }
+
+
+  .address-phone label,  .address-desc label, .address-user label{
+    color: #919191;
+    font-size: rem(30px);
+
+    width: rem(138px);
+    display: inline-block;
+  }
+  .address-phone,.address-desc,.address-user{
+    font-size: rem(30px);
+    margin-bottom: rem(20px);
+  }
+
+  .address-desc{
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+.address-href {
+  .item {
+  }
+  li {
+    a {
+      display: block;
+      color: #405d9e;
+      .ion-plus-round{
+        margin-right: rem(18px);
+      }
+    }
+  }
+}
+
+
+
+
+//地址选择
+
+  .select-address-list {
+    .item-content {
+//      padding: 12px 49px 12px 16px;
+    }
+  }
+
+  .geo-list{
+    .geo{
+      min-height: 52px;
+    }
+  }
+

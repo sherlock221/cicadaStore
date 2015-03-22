@@ -1,0 +1,40 @@
+
+
+<ion-view  cache-view="false" view-title="兑换成功">
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.detail');">  </button>
+        <h1 class="title">兑换成功</h1>
+    </div>
+
+
+    <!--内容区-->
+    <ion-content class="has-header bg-gray" scroll="false">
+
+            <section class="volume-list">
+               <div>
+                   <div class="volume-bg row ">
+                       <span class="ib left_volume"></span>
+                       <span class="col content_volume">
+                           <p class="title text-ellipsis">成功兑换“{{post.productionName}}”</p>
+                           <span class="ib code color-og">{{post.password}}</span>
+                       </span>
+                       <span class="ib right_volume"></span>
+                   </div>
+               </div>
+
+                <div class="volume-forword">
+                    <a ng-href="{{post.shopUrl}}" class="color-blue">前往店铺</a>
+                </div>
+
+
+                <div class="text-center m60">
+                    <button class="button button-energized ca-bg" ng-click="$root.go('mall.exchange')">确定</button>
+                </div>
+
+            </section>
+
+
+    </ion-content>
+
+</ion-view>

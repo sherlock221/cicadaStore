@@ -1,0 +1,55 @@
+/**
+* sherlock221b
+*/
+.row {
+  padding: 0; }
+
+.ib {
+  display: inline-block; }
+
+.bg-gray {
+  background: #f6f6f6; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.pos-rel {
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+.color-og {
+  color: #f69e47; }
+
+.max-image {
+  max-width: 100%;
+  height: auto; }
+
+.color-gray {
+  color: #e3e3e6; }
+
+.color-gray-light {
+  color: #c3c3c3 !important; }
+
+.f18:before {
+  font-size: 18px; }
+
+.t2 {
+  position: relative;
+  top: 2px; }
+
+.vt {
+  vertical-align: top; }
+
+.D3 {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
+
+.mtb40 {
+  margin: rem(80px) 0; }
+
+/*# sourceMappingURL=property.css.map */

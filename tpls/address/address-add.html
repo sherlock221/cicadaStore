@@ -1,0 +1,44 @@
+
+<ion-view view-title="输入收获地址"  >
+
+
+    <div class="bar bar-header bar-positive  ">
+        <button class="button button-icon  icon ion-ios7-arrow-back"   ng-click="resetAdd()">  </button>
+        <h1 class="title">输入收获地址</h1>
+    </div>
+
+    <!--内容区-->
+    <ion-content class="has-header exchange" >
+
+        <form   name="addAddressForm"  role="form"   name="addAddressForm"  novalidate>
+
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">收货人</span>
+                    <input type="text" placeholder="您的姓名" ng-model="fm.userName"  required/>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">手机号码</span>
+                    <input type="tel" placeholder="手机号码" ng-model="fm.phone" required/>
+                </label>
+                <label class="item item-input  item-stacked-label" ng-click="goSelectAddress()">
+                    <span class="input-label">所在地区</span>
+                    <input type="text" ng-model="fm.baseAddress"   placeholder="选择地址"  readonly required style="background: none;"  />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">详细地址</span>
+                    <textarea rows="3" placeholder="详细地址"  ng-model="fm.street" required style="padding-top: 15px;"></textarea>
+                </label>
+            </div>
+        </form>
+
+
+        <div class="text-center mtb40">
+            <button  class="button button-energized ca-bg" ng-click="addAddress();" ng-disabled="addAddressForm.$invalid || isSubmit ">确定</button>
+        </div>
+
+    </ion-content>
+
+
+
+</ion-view>

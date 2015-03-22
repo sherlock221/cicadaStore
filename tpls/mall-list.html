@@ -1,0 +1,114 @@
+
+<ion-view  view-title="知了商城">
+
+            <div class="bar bar-header bar-positive  ">
+                <button class="button button-icon   icon ion-ios7-arrow-back"     on-tap="$root.goCicadaBack();">  </button>
+                <h1 class="title">知了商城</h1>
+            </div>
+
+    <!-- slide box -->
+    <!--<ion-slide-box  class="has-header"-->
+                    <!--scroll="true"-->
+                    <!--show-pager='true'>-->
+        <!--<ion-slide>-->
+            <!--<div>-->
+                <!--<a  class="block" >-->
+                    <!--<img class="full-image" src="img/banner/banner01.jpg" >-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</ion-slide>-->
+
+        <!--<ion-slide>-->
+            <!--<div>-->
+                <!--<a  class="block">-->
+                    <!--<img class="full-image" src="img/banner/banner01.jpg" >-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</ion-slide>-->
+
+    <!--</ion-slide-box>-->
+    <!-- slide box -->
+    <div class="has-header pos-rel">
+        <img   src="img/banner/banner01.jpg" class="full-image"  />
+    </div>
+
+    <!--内容区-->
+    <ion-content   class="has-header"    ng-style="{'marginTop':bannerHeight+'px'}">
+
+        <section>
+            <div class=" clearfix mall-nav">
+
+
+                <div class="float_two text-center pos-rel">
+                    <a href="" class="vm ib"  on-tap="$root.goCicadaVal();">
+                        我的活跃值
+                        <span class="color-og value " ng-hide="$root.isLoadingVal">{{$root.user.credit}}</span>
+                    </a>
+                    <a class="ib my-creadit-load"  ng-show="$root.isLoadingVal">
+                        <spinner type="ripple" class="  vm ib spinner-svg-small important"></spinner>
+                    </a>
+
+                </div>
+                <div class="float_two text-center">
+
+                    <a href="#/mall/exchange" class="block">
+                       兑换纪录
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+
+
+            <div class="clearfix mall-icon">
+                <div class=" float_two" ng-repeat="post in posts">
+                    <a href="javascript:void(0);" on-tap="goDetail(post);"  class="block">
+                        <section class="mail-base">
+
+                                        <img   ng-src="{{post.mediumImage}}"  width="100" />
+
+                            <div>
+                                <h5 class="mail-name">{{post.productionName}}</h5>
+                            </div>
+                            <div>
+                                <!--<div class="ib">-->
+                                    <!--<i class="ib point-expired"></i><span class="mail-point color-gary">{{post.point}}</span>-->
+                                <!--</div>-->
+                                <div class="">
+                                    <span class="ib point t2"></span><span class="mail-point">{{post.credit}}</span>
+                                </div>
+
+                            </div>
+                        </section>
+                    </a>
+                </div>
+
+
+                <!--期待-->
+                <div class=" float_two" >
+                    <a href="javascript:void(0);"   class="block text-center">
+                        <div class="shop-main">
+                            <i class="ib shop"></i>
+                            <div>
+                                <span style="color: #d1d1d1">敬请期待</span>
+                            </div>
+                        </div>
+
+
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </ion-content>
+
+
+
+
+
+</ion-view>

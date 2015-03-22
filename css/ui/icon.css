@@ -1,0 +1,22 @@
+.point-expired {
+  background-size: 15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point-expired.png");
+  background-image: url("../img/icon/point-expired.svg"), none; }
+
+.point {
+  background-size: 15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point.png");
+  background-image: url("../img/icon/point.svg"), none; }
+
+.shop {
+  background-size: 18.5px 17.5px;
+  width: 18.5px;
+  height: 17.5px;
+  background-image: url("../img/icon/shop.png");
+  background-image: url("../img/icon/shop.svg"), none; }
+
+/*# sourceMappingURL=icon.css.map */

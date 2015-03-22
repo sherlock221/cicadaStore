@@ -1,0 +1,85 @@
+//兑换记录
+
+
+.exchange{
+    .scroll{
+      height: 100%;
+    }
+}
+
+.exchangeList{
+
+
+  .exchangeName{
+    margin-top: 6px;
+    margin-bottom: 5px;
+  }
+
+  .exchangeStatus{
+    margin-top: 4px;
+  }
+
+}
+
+
+#exchangeDetail{
+
+  .exchangeList{
+    margin-bottom: 0;
+  }
+
+  .block-exchangeDetail{
+    width: 100%;
+    height: rem(44px);
+    background: #f6f6f6;
+  }
+
+  .shopUrl{
+    margin-top: rem(100px);
+    margin-bottom: rem(40px);
+  }
+
+    .exchangeDetail-desc{
+      border-top: 1px solid #ddd;
+      background: #ffffff;
+      padding : 0 rem(30px);
+
+      .title{
+        margin: 0;
+        padding: rem(20px) 0 ;
+        color: #494949;
+        font-size: rem(32px);
+      }
+      .desc{
+        color: #a7a7a7;
+        border-top: 1px solid #ddd;
+        padding-top: rem(27px);
+
+
+        ul{
+          li{
+            margin-bottom: 5px;
+          }
+        }
+        label{
+          font-size: 16px;
+        }
+
+         span{
+          font-size: 16px;
+        }
+      }
+
+      .detail-wrap-text{
+        display: block;
+        margin-left: 87px;
+        position: relative;
+        top: 2px;
+
+      }
+
+    }
+
+
+
+}

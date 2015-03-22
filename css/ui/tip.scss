@@ -1,0 +1,31 @@
+.tips{
+
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+//  -webkit-transform: translate(-50%,-50%);
+//  -ms-transform: translate(-50%,-50%);
+//  transform: translate(-50%,-50%);
+
+  margin-top: -157px;
+  margin-left: -87.5px;
+
+  .tips-img{
+    width: 175px;
+    height: auto;
+  }
+
+  .tips-header{
+    color: #3a3e49;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .tips-content{
+    color: #a7a7a7;
+  }
+
+}

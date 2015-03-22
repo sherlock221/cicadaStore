@@ -1,0 +1,46 @@
+@charset "utf-8";
+/**
+* sherlock221b
+* 模板配置
+*/
+
+
+
+
+/*
+ * 配置view 全局背景色
+ */
+.bg-view-gray{
+  background: #f6f6f6;
+}
+.bg-view-white{
+  background: #ffffff;
+}
+
+.color-og{
+  color: #f69e47;
+}
+.color-blue{
+  color: #405d9e;
+}
+
+.color-gray{
+  color: #e3e3e6;
+}
+.color-gray-light{
+  color: #c3c3c3 !important;
+}
+
+
+//img lazyload
+.baseMap{
+  background: #e0e0e0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+

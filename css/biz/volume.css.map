@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,YAAY;EAEV,OAAO,EAAE,mBAAmB",
+"sources": ["volume.scss"],
+"names": [],
+"file": "volume.css"
+}

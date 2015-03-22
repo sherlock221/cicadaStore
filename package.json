@@ -1,0 +1,12 @@
+{
+    "name": "PointMall-MASTER",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-cmd-transport" : "*",
+        "grunt-contrib-clean" : "*",
+        "grunt-contrib-uglify": "*"
+    }
+
+}

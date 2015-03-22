@@ -1,0 +1,511 @@
+@charset "UTF-8";
+/**
+* sherlock221b
+* 所有依赖的scss
+*/
+/**
+* sherlock221b
+* 常用功能函数
+*/
+/**
+* sherlock221b
+*/
+.float_two, .float_three, .float_four, .float_five, .float_six {
+  float: left; }
+
+.inline_two, .float_two {
+  width: 49.9%; }
+
+.inline_three, .float_three {
+  width: 33.333%; }
+
+.inline_four, .float_four {
+  width: 24.9%; }
+
+.inline_five, .float_five {
+  width: 19.9%; }
+
+.inline_six, .float_six {
+  width: 16.6%; }
+
+/**
+* sherlock221b
+*/
+.row {
+  padding: 0; }
+
+.ib {
+  display: inline-block; }
+
+.bg-gray {
+  background: #f6f6f6; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.pos-rel {
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+.max-image {
+  max-width: 100%;
+  height: auto; }
+
+.f18:before {
+  font-size: 18px; }
+
+.t2 {
+  position: relative;
+  top: 2px; }
+
+.vt {
+  vertical-align: top; }
+
+.D3 {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
+
+.inherit {
+  width: inherit;
+  height: inherit; }
+
+.mtb40 {
+  margin: 40px 0; }
+
+.vm {
+  vertical-align: middle; }
+
+.pl40 {
+  padding-left: 40px; }
+
+.m60 {
+  margin: 30px 0; }
+
+/**
+ * sherlock221b
+ * float布局方式
+ */
+/*
+ * -----------------------------------------------------------
+ * ----------------------2014/3/25 周二------------------------
+ * ----------------------文本类CSS--------------------
+ * ------------------------sherlock---------------------------
+ * -----------------------------------------------------------
+ * 重点说明:
+ * 1. 文本溢出处理
+ * 2. 文本换行
+ */
+/* 显示一行  溢出显示... */
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* 显示一行 截断显示 */
+.text-clip {
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* 强制换行显示 */
+/*  word-wrap 对于长英文无解*/
+.text-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all; }
+
+/* 文字居中*/
+.text-center {
+  text-align: center; }
+
+/** 针对webkit 多行文本显示...  **/
+.multi-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+
+.multi-2 {
+  -webkit-line-clamp: 2; }
+
+.multi-3 {
+  -webkit-line-clamp: 3; }
+
+.multi-4 {
+  -webkit-line-clamp: 4; }
+
+/**
+* sherlock221b
+* 模板配置
+*/
+/*
+ * 配置view 全局背景色
+ */
+.bg-view-gray {
+  background: #f6f6f6; }
+
+.bg-view-white {
+  background: #ffffff; }
+
+.color-og {
+  color: #f69e47; }
+
+.color-blue {
+  color: #405d9e; }
+
+.color-gray {
+  color: #e3e3e6; }
+
+.color-gray-light {
+  color: #c3c3c3 !important; }
+
+.baseMap {
+  background: #e0e0e0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; }
+
+/**
+* sherlock221b
+*/
+button.ca-sm {
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  width: 91px;
+  min-width: 91px;
+  min-height: 32px;
+  border-radius: 4px; }
+
+button.ca-bg {
+  height: 44px;
+  line-height: 44px;
+  width: 274px;
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+  min-width: 274px;
+  min-height: 44px;
+  border-radius: 4px; }
+
+button:disabled {
+  background-color: #aaaaaa !important;
+  border-color: #aaaaaa !important;
+  opacity: 1 !important; }
+
+.form-title {
+  font-size: 18px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #c6cbce; }
+
+form .form-text {
+  font-size: 18px;
+  color: #8d8d8d;
+  border: 0 none;
+  border-bottom: 1px solid #c6cbce;
+  padding: 0px 15px;
+  height: 45px;
+  line-height: 45px;
+  background: #ffffff;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  outline: 0 none; }
+
+.form-tips {
+  color: #a2a1a1;
+  padding-right: 12px;
+  font-size: 12px; }
+  .form-tips.helper {
+    margin-top: 10.5px;
+    margin-bottom: 37.5px; }
+
+.ca-radio.checkbox input:checked:before, .ca-radio.checkbox input:checked + .checkbox-icon:before {
+  background: #f59854;
+  border-color: #f59854; }
+
+.point-expired {
+  background-size: 15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point-expired.png");
+  background-image: url("../img/icon/point-expired.svg"), none; }
+
+.point {
+  background-size: 15px  15px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/point.png");
+  background-image: url("../img/icon/point.svg"), none; }
+
+.shop {
+  background-size: 18.5px 17.5px;
+  width: 18.5px;
+  height: 17.5px;
+  background-image: url("../img/icon/shop.png"); }
+
+.geo-location {
+  background-size: 15px 19px;
+  width: 15px;
+  height: 19px;
+  background-image: url("../img/icon/location.png");
+  background-image: url("../img/icon/location.svg"), none; }
+
+.spinner-svg-small {
+  width: 25px;
+  height: 25px; }
+  .spinner-svg-small svg {
+    stroke: #405d9e;
+    fill: #405d9e; }
+  .spinner-svg-small.important svg {
+    stroke: #f69e47;
+    fill: #f69e47; }
+
+.tips {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -157px;
+  margin-left: -87.5px; }
+  .tips .tips-img {
+    width: 175px;
+    height: auto; }
+  .tips .tips-header {
+    color: #3a3e49;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 17px; }
+  .tips .tips-content {
+    color: #a7a7a7; }
+
+/**
+* sherlock221b
+*/
+/** ionic 1.0rc1 弹窗 **/
+.popup-body {
+  overflow: auto; }
+
+/**
+* sherlock221b
+* 商城列表部分
+*/
+.mall {
+  color: #494949; }
+
+.my-creadit-load {
+  position: absolute;
+  right: 27px;
+  top: -3px; }
+
+.mall-nav {
+  background: #f6f6f6;
+  text-align: center; }
+  .mall-nav a {
+    color: #909090;
+    font-size: 15px;
+    padding: 13px 0; }
+  .mall-nav .value {
+    font-size: 16px;
+    font-weight: bold; }
+
+.mall-icon {
+  text-align: center;
+  border-top: 1px solid #e8e8e8; }
+  .mall-icon a {
+    padding-top: 32px;
+    padding-bottom: 20.5px;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 178px;
+    position: relative; }
+  .mall-icon .float_two:nth-child(2n) a {
+    border-left: 1px solid #e8e8e8; }
+  .mall-icon .mail-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #494949;
+    margin: 0;
+    margin-bottom: 5px; }
+  .mall-icon .mail-base {
+    display: inline-block;
+    text-align: left; }
+
+.mail-point {
+  font-size: 16px;
+  color: #f69e47;
+  display: inline-block;
+  margin-left: 7.5px; }
+
+.detail {
+  background: #f6f6f6; }
+
+.shop-main {
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  width: 100%; }
+
+/** 滑块的hack **/
+.slider-pager {
+  bottom: 11px; }
+
+.slider-pager-page .ion-record {
+  font-size: 10px; }
+
+/**
+* sherlock221b
+*/
+.detail-body {
+  margin-top: 22px;
+  padding-left: 15px;
+  padding-right: 14px;
+  padding-bottom: 50px; }
+  .detail-body .tips {
+    margin-bottom: 111.5px; }
+  .detail-body ul.list li {
+    margin-bottom: 14px; }
+    .detail-body ul.list li label {
+      font-size: 16px;
+      margin-right: 15px; }
+    .detail-body ul.list li span {
+      color: #919191;
+      font-size: 15px; }
+  .detail-body .detail-wrap-text {
+    display: block;
+    margin-left: 87px;
+    position: relative;
+    top: 2px; }
+
+.detail-header {
+  padding: 12.5px 0;
+  padding-left: 15px;
+  padding-right: 14px;
+  background: #ffffff; }
+  .detail-header h3 {
+    font-size: 17px;
+    margin-bottom: 5px; }
+
+.detail-change {
+  padding-left: 15px;
+  padding-right: 14px;
+  background: #ffffff;
+  padding: 10.5px; }
+  .detail-change .color-og {
+    font-size: 18px; }
+
+.pointMs {
+  position: relative;
+  top: 6px;
+  display: inline-block; }
+
+.exchange .scroll {
+  height: 100%; }
+
+.exchangeList .exchangeName {
+  margin-top: 6px;
+  margin-bottom: 5px; }
+.exchangeList .exchangeStatus {
+  margin-top: 4px; }
+
+#exchangeDetail .exchangeList {
+  margin-bottom: 0; }
+#exchangeDetail .block-exchangeDetail {
+  width: 100%;
+  height: 22px;
+  background: #f6f6f6; }
+#exchangeDetail .shopUrl {
+  margin-top: 50px;
+  margin-bottom: 20px; }
+#exchangeDetail .exchangeDetail-desc {
+  border-top: 1px solid #ddd;
+  background: #ffffff;
+  padding: 0 15px; }
+  #exchangeDetail .exchangeDetail-desc .title {
+    margin: 0;
+    padding: 10px 0;
+    color: #494949;
+    font-size: 16px; }
+  #exchangeDetail .exchangeDetail-desc .desc {
+    color: #a7a7a7;
+    border-top: 1px solid #ddd;
+    padding-top: 13.5px; }
+    #exchangeDetail .exchangeDetail-desc .desc ul li {
+      margin-bottom: 5px; }
+    #exchangeDetail .exchangeDetail-desc .desc label {
+      font-size: 16px; }
+    #exchangeDetail .exchangeDetail-desc .desc span {
+      font-size: 16px; }
+  #exchangeDetail .exchangeDetail-desc .detail-wrap-text {
+    display: block;
+    margin-left: 87px;
+    position: relative;
+    top: 2px; }
+
+/**
+* sherlock221b
+*/
+.address-list .item {
+  margin-top: 20px; }
+.address-list .address-phone label, .address-list .address-desc label, .address-list .address-user label {
+  color: #919191;
+  font-size: 15px;
+  width: 69px;
+  display: inline-block; }
+.address-list .address-phone, .address-list .address-desc, .address-list .address-user {
+  font-size: 15px;
+  margin-bottom: 10px; }
+.address-list .address-desc {
+  margin-bottom: 0; }
+
+.address-href li a {
+  display: block;
+  color: #405d9e; }
+  .address-href li a .ion-plus-round {
+    margin-right: 9px; }
+
+.geo-list .geo {
+  min-height: 52px; }
+
+.volume-list {
+  padding: 15px 20px; }
+  .volume-list .left_volume {
+    background-image: url("../img/left_volume.png");
+    background-size: 100% 100%;
+    width: 7px;
+    height: 67px; }
+  .volume-list .right_volume {
+    background-image: url("../img/right_volume.png");
+    background-size: 100% 100%;
+    width: 7px;
+    height: 67px; }
+  .volume-list .content_volume {
+    background: #ffffff;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 0 15px; }
+    .volume-list .content_volume .code {
+      font-size: 18px; }
+    .volume-list .content_volume .title {
+      font-size: 16px;
+      margin-top: 11px;
+      margin-bottom: 5px; }
+  .volume-list .volume-forword {
+    margin: 9px 0;
+    text-align: right; }
+
+/*# sourceMappingURL=style.css.map */

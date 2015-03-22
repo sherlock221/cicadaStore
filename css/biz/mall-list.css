@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/**
+* sherlock221b
+* 商城列表部分
+*/
+.mall {
+  color: #494949; }
+
+.mall-nav {
+  background: #f6f6f6;
+  text-align: center; }
+  .mall-nav a {
+    color: #909090;
+    font-size: 15px;
+    padding: 13px 0; }
+  .mall-nav .value {
+    font-size: 16px;
+    font-weight: bold; }
+
+/*# sourceMappingURL=mall-list.css.map */

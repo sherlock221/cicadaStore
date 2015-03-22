@@ -1,5 +1,5 @@
 var SelectPCA = angular.module("selectPCA",[])
-    .controller("SelectProvinceCtrl", function ($scope, $rootScope, $timeout,Util,selectPCASev,GeoLocationSev) {
+    .controller("SelectProvinceCtrl",["$scope", "$rootScope", "$timeout","Util","selectPCASev","GeoLocationSev",function ($scope, $rootScope, $timeout,Util,selectPCASev,GeoLocationSev) {
         console.log("province controller only one ...");
 
         $scope.fm ={
@@ -86,9 +86,9 @@ var SelectPCA = angular.module("selectPCA",[])
 
         //init 完成后的调用
         selectProvice();
-    })
+    }])
 
-    .controller("SelectCityCtrl", function ($scope, $stateParams,$rootScope,Util,selectPCASev) {
+    .controller("SelectCityCtrl",["$scope", "$stateParams","$rootScope","Util","selectPCASev",function ($scope, $stateParams,$rootScope,Util,selectPCASev) {
         console.log("city controller only one ...");
 
         var code = $stateParams.code;
@@ -106,9 +106,9 @@ var SelectPCA = angular.module("selectPCA",[])
             Util.setSgObj("selectAddress",selectAddress);
             $rootScope.go("mall.select.area",{code : post.code});
         }
-    })
+    }])
 
-    .controller("SelectAreaCtrl", function ($scope, $stateParams,$rootScope, Util,selectPCASev) {
+    .controller("SelectAreaCtrl",["$scope", "$stateParams","$rootScope", "Util","selectPCASev",function ($scope, $stateParams,$rootScope, Util,selectPCASev) {
         console.log("area controller only one ...");
         $scope.posts = [];
         var code = $stateParams.code;
@@ -126,5 +126,4 @@ var SelectPCA = angular.module("selectPCA",[])
             Util.setSgObj("selectAddress",selectAddress);
             $rootScope.go("mall.address.add");
         }
-    })
-
+    }]);

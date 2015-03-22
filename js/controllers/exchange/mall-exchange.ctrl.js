@@ -1,4 +1,4 @@
-PointMall.controller("MallExchangeCtrl",function($scope,$ionicScrollDelegate,$rootScope,$timeout,$stateParams,Util,MallSev){
+PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootScope","$timeout","$stateParams","Util","MallSev",function($scope,$ionicScrollDelegate,$rootScope,$timeout,$stateParams,Util,MallSev){
 
     $scope.posts = [];
 
@@ -22,7 +22,7 @@ PointMall.controller("MallExchangeCtrl",function($scope,$ionicScrollDelegate,$ro
     $scope.loadMore = function(){
         console.log("load more...");
         load($rootScope.token, $scope.fm.queryTime).then(function(res){
-             console.log("load...data");
+            console.log("load...data");
             if(res.rtnCode == "0000000"){
                 //没有最新的
                 if(res.bizData.length <= 0){
@@ -35,7 +35,7 @@ PointMall.controller("MallExchangeCtrl",function($scope,$ionicScrollDelegate,$ro
                 }
             }
             else{
-               console.error("error");
+                console.error("error");
             }
 
         },function(err){
@@ -90,4 +90,4 @@ PointMall.controller("MallExchangeCtrl",function($scope,$ionicScrollDelegate,$ro
 
     $scope.refresh();
 
-});
+}]);

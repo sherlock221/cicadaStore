@@ -1,6 +1,5 @@
-PointMall.controller("MallListCtrl",function($state,$rootScope,$scope,Util,MallSev){
-        $scope.posts = [
-        ];
+PointMall.controller("MallListCtrl",["$state","$rootScope","$scope","Util","MallSev",function($state,$rootScope,$scope,Util,MallSev){
+        $scope.posts = [];
 
     //参数
     $scope.fm = {
@@ -34,4 +33,4 @@ PointMall.controller("MallListCtrl",function($state,$rootScope,$scope,Util,MallS
 
 
     $scope.loadList();
-});
+}]);

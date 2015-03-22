@@ -1,7 +1,7 @@
 /**
  * 虚拟卷兑换
  */
-PointMall.controller("VirtualInputCtrl",function($state,$rootScope,$ionicPopup,$scope,Util,MallSev){
+PointMall.controller("VirtualInputCtrl",["$state","$rootScope","$ionicPopup","$scope","Util","MallSev",function($state,$rootScope,$ionicPopup,$scope,Util,MallSev){
 
         var  product = Util.getSgObj("product");
 
@@ -96,4 +96,4 @@ PointMall.controller("VirtualInputCtrl",function($state,$rootScope,$ionicPopup,$
 
 
 
-});
+}]);

@@ -2,35 +2,42 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        as : grunt.file.readJSON('alias.json'),
-     transport: {
-            options : {
-                paths: ['sea-modules'],
-                alias: '<%= as.spm.alias %>'
-            },
 
-            //loop 项目打包
-            loop: {
-                files : [
-                    {
-                        expand: true,
-                        cwd :  "sea-modules",
-                        src : [
-                            "core/jquery/1.9.1/jquery.js",
-                            "ui/loop_world/loopWorld.js",
-                            "service/loop.js"
-                        ],
-                        dest : './build/transport'
-                    }
-                ]
-            }
-        },
         concat: {
             options : {
             },
-            loop: {
-                src  : ["./build/transport/**/*.js","!./build/transport/**/*-debug.js"],
-                dest : "./build/publish/main-debug.js"
+            cicadaCtl: {
+                src  : [
+                    "./js/controllers/**/*.js",
+                    ],
+                dest : "./dist/js/all.ctrl.js"
+            },
+            cicadaSev: {
+                src  : [
+                    "./js/services/**/*.js",
+                ],
+                dest : "./dist/js/all.sev.js"
+            },
+            cicadaDec: {
+                src  : [
+                    "./js/directive/**/*.js",
+                ],
+                dest : "./dist/js/all.dec.js"
+            },
+            cicadaOther : {
+                src  : [
+                    "./js/interceptors/**/*.js",
+                ],
+                dest : "./dist/js/all.other.js"
+            },
+            cicadaAll : {
+                src  : [
+                    "./dist/js/all.ctrl.js",
+                    "./dist/js/all.sev.js",
+                    "./dist/js/all.dec.js",
+                    "./dist/js/all.other.js"
+                ],
+                dest : "./dist/js/all.js"
             }
         },
 
@@ -38,8 +45,8 @@ module.exports = function(grunt) {
             options : {
             },
             loop : {
-                src  : "./build/publish/main-debug.js",
-                dest : "./build/publish/main.js"
+                src  : "./dist/js/all.js",
+                dest : "./dist/js/all.min.js"
             }
         },
         clean : {
@@ -59,6 +66,7 @@ module.exports = function(grunt) {
 
 
     //测试打包loop
-    grunt.registerTask('build', ['transport','concat','uglify','clean']);
+    grunt.registerTask('build', ['concat:cicadaCtl','concat:cicadaSev','concat:cicadaDec','concat:cicadaOther','concat:cicadaAll']);
+    grunt.registerTask('jsMin', ['uglify']);
 
 };

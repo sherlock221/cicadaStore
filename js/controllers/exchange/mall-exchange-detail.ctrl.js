@@ -1,4 +1,4 @@
-PointMall.controller("MallExchangeDetailCtrl",function($scope,$rootScope,$timeout,$stateParams,Util,MallSev){
+PointMall.controller("MallExchangeDetailCtrl",["$scope","$rootScope","$timeout","$stateParams","Util","MallSev",function($scope,$rootScope,$timeout,$stateParams,Util,MallSev){
 
     $scope.post = {};
 
@@ -6,9 +6,6 @@ PointMall.controller("MallExchangeDetailCtrl",function($scope,$rootScope,$timeou
 
     //获得详情ID
     var exchangeId =  $stateParams.exchangeId;
-
-
-
 
 
     //获得详情
@@ -26,4 +23,4 @@ PointMall.controller("MallExchangeDetailCtrl",function($scope,$rootScope,$timeou
     loadDetail();
 
 
-});
+}]);

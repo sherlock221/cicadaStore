@@ -1,4 +1,4 @@
-PointMall.controller("MallDetailCtrl",function($state,$stateParams,$scope,$rootScope,Util,AddressSev,MallSev){
+PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootScope","Util","AddressSev","MallSev",function($state,$stateParams,$scope,$rootScope,Util,AddressSev,MallSev){
    //获得当前选择的商品
    var  product = Util.getSgObj("product");
         product.comment =  JSON.parse(product.comment);
@@ -101,4 +101,4 @@ PointMall.controller("MallDetailCtrl",function($state,$stateParams,$scope,$rootS
 
 
     }
-});
+}]);

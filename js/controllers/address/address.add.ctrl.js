@@ -1,13 +1,13 @@
-PointMall.controller("AddressAddCtrl",function($scope,$rootScope,Util,AddressSev,selectPCASev){
-        console.log("address add");
+PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev","selectPCASev",function($scope,$rootScope,Util,AddressSev,selectPCASev){
+    console.log("address add");
 
-     //添加新地址参数
-     $scope.fm ={
-         userName : "",
-         phone : "",
-         baseAddress : "",
-         street : ""
-     }
+    //添加新地址参数
+    $scope.fm ={
+        userName : "",
+        phone : "",
+        baseAddress : "",
+        street : ""
+    }
 
 //    $scope.isSubmit = false;
 
@@ -73,4 +73,4 @@ PointMall.controller("AddressAddCtrl",function($scope,$rootScope,Util,AddressSev
     }
 
 
-});
+}]);

@@ -1,5 +1,4 @@
-PointMall.controller("AddressListCtrl", function ($scope, $rootScope, Util, MallSev) {
-
+PointMall.controller("AddressListCtrl",["$scope","$rootScope","Util","MallSev",function ($scope, $rootScope, Util, MallSev) {
 
     var product = Util.getSgObj("product");
     var address;
@@ -8,7 +7,7 @@ PointMall.controller("AddressListCtrl", function ($scope, $rootScope, Util, Mall
     //进入加载
     $scope.$on("$ionicView.beforeEnter", function () {
 
-       $rootScope.scrollTopByName("addressListScroll");
+        $rootScope.scrollTopByName("addressListScroll");
 
         console.log("address list  before enter..");
         address = Util.getLgObj("address");
@@ -50,4 +49,4 @@ PointMall.controller("AddressListCtrl", function ($scope, $rootScope, Util, Mall
 
     }
 
-});
+}]);

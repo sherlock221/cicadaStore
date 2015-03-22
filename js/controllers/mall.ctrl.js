@@ -1,4 +1,4 @@
-PointMall.controller("MallCtrl", function ($state, $stateParams, $location, $scope, $timeout, $rootScope, $ionicLoading,$ionicScrollDelegate,$ionicPopup, Util, MallSev) {
+PointMall.controller("MallCtrl",["$state", "$stateParams", "$location", "$scope", "$timeout", "$rootScope", "$ionicLoading","$ionicScrollDelegate","$ionicPopup", "Util", "MallSev",function ($state, $stateParams, $location, $scope, $timeout, $rootScope, $ionicLoading,$ionicScrollDelegate,$ionicPopup, Util, MallSev) {
 //        console.log($location.$$url);
 
 
@@ -133,4 +133,4 @@ PointMall.controller("MallCtrl", function ($state, $stateParams, $location, $sco
        Util.back();
     }
 
-});
+}]);

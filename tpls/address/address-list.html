@@ -2,13 +2,13 @@
 <ion-view view-title="确认收货地址" class="bg-view-gray" >
 
 
-    <div class="bar bar-header bar-positive  ">
+    <div class="bar bar-header bar-positive   " >
         <button class="button button-icon  icon ion-ios7-arrow-back"   ng-click="$root.back();">  </button>
         <h1 class="title">确认收货地址</h1>
     </div>
 
     <!--内容区-->
-    <ion-content class="has-header exchange "  delegate-handle="addressListScroll">
+    <ion-content class="has-header exchange "  delegate-handle="addressListScroll" has-bouncing="false">
 
     <form role="form" novalidate>
         <ul class="list address-list">
@@ -51,17 +51,20 @@
             </li>
 
         </ul>
+        <div>
+            <ul class="list address-href">
+                <li class="item" ng-click="$root.go('mall.address.add')">
+                    <a href="javascript:void(0)"><i class="ib ion-plus-round ion "></i>使用新的收货地址</a>
+                </li>
+            </ul>
+        </div>
 
-
-        <ul class="list address-href">
-            <li class="item" ng-click="$root.go('mall.address.add')">
-                 <a href="javascript:void(0)"><i class="ib ion-plus-round ion "></i>使用新的收货地址</a>
-            </li>
-        </ul>
-
-        <div class="text-center mtb40">
+        <div class="text-center mtb40" >
             <button class="button button-energized ca-bg" ng-click="exchange()">确定</button>
         </div>
+
+        <div >12321</div>
+
 
     </form>
     </ion-content>

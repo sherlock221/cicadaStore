@@ -29,24 +29,24 @@ PointMall.run(function ($ionicPlatform) {
 })
 
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider,VERSION) {
         $stateProvider
 
             .state("mall", {
                 url: "/mall",
                 abstract: true,
-                templateUrl: "tpls/mall.html"
+                templateUrl: "tpls/mall.html?v="+VERSION.URL_VERSION
             })
             //积分商城
             .state("mall.list", {
                 url: "/list",
-                templateUrl: "tpls/mall-list.html",
+                templateUrl: "tpls/mall-list.html?v="+VERSION.URL_VERSION,
                 controller: "MallListCtrl"
             })
             //商品信息
             .state("mall.detail", {
                 url: "/detail",
-                templateUrl: "tpls/mall-detail.html",
+                templateUrl: "tpls/mall-detail.html?v="+VERSION.URL_VERSION,
                 controller: "MallDetailCtrl"
 
             })
@@ -62,7 +62,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/exchange",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/exchange/exchange-list.html"
+                        templateUrl: "tpls/exchange/exchange-list.html?v="+VERSION.URL_VERSION
 //                        controller: "MallExchangeCtrl"
                     }
                 }
@@ -73,7 +73,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/detail/:exchangeId",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/exchange/exchange-detail.html",
+                        templateUrl: "tpls/exchange/exchange-detail.html?v="+VERSION.URL_VERSION,
                         controller: "MallExchangeDetailCtrl"
                     }
                 }
@@ -89,7 +89,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/input",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/virtual/virtual-input.html",
+                        templateUrl: "tpls/virtual/virtual-input.html?v="+VERSION.URL_VERSION,
                         controller: "VirtualInputCtrl"
                     }
                 }
@@ -104,7 +104,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/list",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/address/address-list.html",
+                        templateUrl: "tpls/address/address-list.html?v="+VERSION.URL_VERSION,
                         controller: "AddressListCtrl"
                     }
                 }
@@ -114,7 +114,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/add",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/address/address-add.html",
+                        templateUrl: "tpls/address/address-add.html?v="+VERSION.URL_VERSION,
                         controller: "AddressAddCtrl"
                     }
                 }
@@ -126,7 +126,7 @@ PointMall.run(function ($ionicPlatform) {
                 url: "/volume",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/volume/volume-input.html",
+                        templateUrl: "tpls/volume/volume-input.html?v="+VERSION.URL_VERSION,
                         controller: "VolumeInputCtrl"
                     }
                 }
@@ -142,7 +142,7 @@ PointMall.run(function ($ionicPlatform) {
                 url : "/province",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/select/select-province.html",
+                        templateUrl: "tpls/select/select-province.html?v="+VERSION.URL_VERSION,
                         controller: "SelectProvinceCtrl"
                     }
                 }
@@ -151,7 +151,7 @@ PointMall.run(function ($ionicPlatform) {
                 url : "/city/:code",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/select/select-city.html",
+                        templateUrl: "tpls/select/select-city.html?v="+VERSION.URL_VERSION,
                         controller: "SelectCityCtrl"
                     }
                 }
@@ -160,7 +160,7 @@ PointMall.run(function ($ionicPlatform) {
                 url : "/area/:code",
                 views: {
                     "@mall": {
-                        templateUrl: "tpls/select/select-area.html",
+                        templateUrl: "tpls/select/select-area.html?v="+VERSION.URL_VERSION,
                         controller: "SelectAreaCtrl"
                     }
                 }
@@ -191,13 +191,12 @@ PointMall.run(function ($ionicPlatform) {
 //            mall: "/credit",
             resource : "./data"
         }
-
     })
 
     //版本控制
     .constant("VERSION",{
 
-        URL_VERSION : "",
+        URL_VERSION : "3.1",
         ADDRESS_SOURCE_VERSION : "2.0"
 
     });

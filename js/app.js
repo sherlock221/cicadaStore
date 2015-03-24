@@ -178,8 +178,9 @@ PointMall.run(function ($ionicPlatform) {
     })
 
 //配置http 拦截器
-    .config(function ($httpProvider) {
+    .config(function ($httpProvider,$compileProvider) {
         $httpProvider.interceptors.push("AjaxInterceptors");
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/);
 
     })
     //设置SEVER地址
@@ -187,8 +188,8 @@ PointMall.run(function ($ionicPlatform) {
         url: {
 //            mall: "http://172.16.130.106:8086/credit",
 //            mall: "http://10.10.68.11:10000/credit",
-            mall: "./data",
-//            mall: "/credit",
+//            mall: "./data",
+            mall: "/credit",
             resource : "./data"
         }
     })
@@ -196,7 +197,7 @@ PointMall.run(function ($ionicPlatform) {
     //版本控制
     .constant("VERSION",{
 
-        URL_VERSION : "3.1",
-        ADDRESS_SOURCE_VERSION : "2.0"
+        URL_VERSION : "4.3",
+        ADDRESS_SOURCE_VERSION : "2.2"
 
     });

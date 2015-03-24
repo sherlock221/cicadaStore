@@ -11,9 +11,13 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
 
 //    $scope.isSubmit = false;
 
+
+
     //检测视图进入
     $scope.$on("$ionicView.beforeEnter",function(){
+
         console.log("address  before enter..");
+
         var address = Util.getSgObj("selectAddress");
 
         if(address && address.province &&  address.city && address.area){
@@ -23,6 +27,8 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
             $scope.fm.baseAddress = "";
         }
 
+        //滚动条顶部
+        $rootScope.scrollTopByName("addressAddScroll");
     });
 
 
@@ -69,7 +75,10 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
     $scope.resetAdd = function(){
         //reset数据
         Util.removeSg("selectAddress");
+        $scope.fm = {};
         $rootScope.backToView('mall.address.list');
+
+
     }
 
 

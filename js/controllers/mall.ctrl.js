@@ -15,16 +15,14 @@ PointMall.controller("MallCtrl",["$state", "$stateParams", "$location", "$scope"
     paramsUrl = Util.parseParams(paramsUrl);
     var token = Util.getParam("token", paramsUrl);
     if (!token) {
-//        alert("token为空!");
-//        return;
-        $rootScope.token = "123";
+        alert("token为空!");
+        return;
     }
 
 
    // alert(JSON.stringify(paramsUrl));
 
     $rootScope.isLoadingVal = false;
-//        $rootScope.token = "251ad9b65d4a79fcd2d09a244f01ea8a";
     $rootScope.token = token;
     console.log($rootScope.token);
 

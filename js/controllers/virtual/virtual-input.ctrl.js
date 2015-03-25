@@ -14,7 +14,6 @@ PointMall.controller("VirtualInputCtrl",["$state","$rootScope","$ionicPopup","$s
     $scope.isSubmit = false;
 
 
-
     console.log("input...");
 
     // A confirm dialog
@@ -31,9 +30,6 @@ PointMall.controller("VirtualInputCtrl",["$state","$rootScope","$ionicPopup","$s
             $rootScope.alert("","请输入正确的手机号!");
             return;
         }
-
-
-
 
 
         //提示框
@@ -56,7 +52,6 @@ PointMall.controller("VirtualInputCtrl",["$state","$rootScope","$ionicPopup","$s
         });
 
 
-
         function isMobil(s)
         {
             var reg=/^0?(13[0-9]|15[012356789]|18[0123456789]|14[57])[0-9]{8}$/;
@@ -67,7 +62,7 @@ PointMall.controller("VirtualInputCtrl",["$state","$rootScope","$ionicPopup","$s
         confirmPopup.then(function(res) {
             if(res) {
                 $scope.isSubmit = true;
-                MallSev.exchange($rootScope.token,$scope.fm.productionId,$scope.fm.phone).then(function(res){
+                MallSev.exchange($rootScope.token,$scope.fm.productionId,product.productionType,$scope.fm.phone).then(function(res){
                     console.log(res);
                     if(res.rtnCode == "0000000"){
 

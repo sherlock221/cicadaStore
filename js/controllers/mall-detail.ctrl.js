@@ -55,10 +55,12 @@ PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootSc
                    //更新本地缓存
                    Util.setLgObj("address",res.bizData);
 
+
                    //跳转list
                    $rootScope.go("mall.address.list");
                }
                else{
+
                    //跳转添加
                    $rootScope.go("mall.address.add");
                }

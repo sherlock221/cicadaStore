@@ -186,10 +186,10 @@ PointMall.run(function ($ionicPlatform) {
     //设置SEVER地址
     .constant('SERVER', {
         url: {
-//            mall: "http://172.16.130.106:8086/credit",
+            mall: "http://172.16.130.218:8086/credit",
 //            mall: "http://10.10.68.11:10000/credit",
 //            mall: "./data",
-            mall: "/credit",
+//            mall: "/credit",
             resource : "./data"
         }
     })

@@ -76,7 +76,17 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
         //reset数据
         Util.removeSg("selectAddress");
         $scope.fm = {};
-        $rootScope.backToView('mall.address.list');
+
+        var address = Util.getLgObj("address");
+
+        //address 有值
+        if(address){
+            $rootScope.backToView('mall.address.list');
+        }
+        else{
+            $rootScope.backToView('mall.detail');
+        }
+
 
 
     }

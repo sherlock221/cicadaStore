@@ -20,7 +20,29 @@ PointMall.controller("MallExchangeDetailCtrl",["$scope","$rootScope","$timeout",
     }
 
 
-    loadDetail();
+    $scope.goDetail = function(post){
+        $rootScope.loading(true);
 
+
+        //加载详情
+        MallSev.getProductDetail(post.exchangeLog.productionId).then(function(res){
+            $rootScope.loading(false);
+            if(res.rtnCode == "0000000"){
+                Util.setSgObj("product",res.bizData);
+                $rootScope.go("mall.detail");
+            }
+            else{
+               alert(res.msg);
+            }
+
+        },function(err){
+            $rootScope.loading(false);
+        });
+
+    }
+
+
+    //加载详情
+    loadDetail();
 
 }]);

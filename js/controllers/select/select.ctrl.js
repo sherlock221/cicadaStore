@@ -10,31 +10,31 @@ var SelectPCA = angular.module("selectPCA",[])
         $scope.isGeoLoading = true;
 
             //定位
-//              GeoLocationSev.LBS()
-//                  .then(function(val){
-//                      var longitude = val.coords.longitude;
-//                      var latitude = val.coords.latitude;
-//                      console.log(longitude,latitude);
-//                      return  GeoLocationSev.geocoder(latitude,longitude);
-//                  },function(err){
-//                      console.log(err);
-//                      $rootScope.alert("",err.msg);
-//                      $scope.isGeoLoading = false;
-//                  })
-//                  .then(function(res){
-//                      if(res.rtnCode == "0000000"){
-//                          var  address =  JSON.parse(res.bizData.addressJson).result.addressComponent;
-//                          $scope.fm.geoAddress = address.province + " "+address.city + " "+  address.district;
-//                      }
-//                      else{
-//                          $rootScope.alert("",res.msg);
-//                      }
-//
-//                      $scope.isGeoLoading = false;
-//
-//                  },function(){
-//                      $scope.isGeoLoading = false;
-//                  });
+              GeoLocationSev.LBS()
+                  .then(function(val){
+                      var longitude = val.coords.longitude;
+                      var latitude = val.coords.latitude;
+                      console.log(longitude,latitude);
+                      return  GeoLocationSev.geocoder(latitude,longitude);
+                  },function(err){
+                      console.log(err);
+                      $rootScope.alert("",err.msg);
+                      $scope.isGeoLoading = false;
+                  })
+                  .then(function(res){
+                      if(res.rtnCode == "0000000"){
+                          var  address =  JSON.parse(res.bizData.addressJson).result.addressComponent;
+                          $scope.fm.geoAddress = address.province + " "+address.city + " "+  address.district;
+                      }
+                      else{
+                          $rootScope.alert("",res.msg);
+                      }
+
+                      $scope.isGeoLoading = false;
+
+                  },function(){
+                      $scope.isGeoLoading = false;
+                  });
 
 
 //        var longitude = 108.8820463792503;

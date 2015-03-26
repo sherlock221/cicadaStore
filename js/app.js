@@ -165,7 +165,6 @@ PointMall.run(function ($ionicPlatform) {
                     }
                 }
             })
-
         //默认路径
         $urlRouterProvider.otherwise('/mall/list');
 
@@ -186,8 +185,8 @@ PointMall.run(function ($ionicPlatform) {
     //设置SEVER地址
     .constant('SERVER', {
         url: {
-            mall: "http://172.16.130.218:8086/credit",
-//            mall: "http://10.10.68.11:10000/credit",
+//            mall: "http://172.16.130.218:8086/credit",
+            mall: "http://10.10.68.11:10000/credit",
 //            mall: "./data",
 //            mall: "/credit",
             resource : "./data"
@@ -197,7 +196,7 @@ PointMall.run(function ($ionicPlatform) {
     //版本控制
     .constant("VERSION",{
 
-        URL_VERSION : "4.3",
+        URL_VERSION : "4.4",
         ADDRESS_SOURCE_VERSION : "2.2"
 
     });

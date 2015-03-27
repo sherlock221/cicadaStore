@@ -40,12 +40,12 @@
                     </li>
                     <li>
                         <label class="" style=" float: left;">兑换流程:</label>
-                        <span class="detail-wrap-text"> {{post.comment.exchange}}</span>
+                        <span class="detail-wrap-text" ng-bind-html="post.comment.exchange"></span>
                     </li>
 
                     <li>
                         <label class="" style=" float: left;">备注:</label>
-                        <span class="detail-wrap-text"> {{post.comment.desc}}</span>
+                        <span class="detail-wrap-text" ng-bind-html="post.comment.desc"></span>
                     </li>
                 </ul>
             </div>

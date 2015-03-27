@@ -28,7 +28,6 @@ PointMall.run(function ($ionicPlatform) {
     });
 })
 
-
     .config(function ($stateProvider, $urlRouterProvider,VERSION) {
         $stateProvider
 
@@ -170,7 +169,7 @@ PointMall.run(function ($ionicPlatform) {
 
     })
 
-//设置基本loading
+    //设置基本loading
     .constant('$ionicLoadingConfig', {
         template: '正在加载...',
         noBackdrop : true
@@ -186,8 +185,8 @@ PointMall.run(function ($ionicPlatform) {
     .constant('SERVER', {
         url: {
 //            mall: "http://172.16.130.218:8086/credit",
-//            mall: "http://10.10.68.11:10000/credit",
-            mall: "http://imzhiliao.com:10000/credit",
+            mall: "http://10.10.68.11:10000/credit",
+//            mall: "http://imzhiliao.com:10000/credit",
 //            mall: "./data",
 //            mall: "/credit",
             resource : "./data"

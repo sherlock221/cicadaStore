@@ -10,6 +10,8 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
         "queryTime" : 0
     }
 
+
+
     $scope.isSubmit = false;
 
 
@@ -56,7 +58,6 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
     $scope.refresh = function () {
         console.log("refresh...");
         $scope.fm.queryTime = 0;
-
         $timeout(function(){
 
             load($rootScope.token, $scope.fm.queryTime).then(function(res){

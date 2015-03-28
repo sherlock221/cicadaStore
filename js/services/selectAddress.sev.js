@@ -28,7 +28,7 @@ SelectPCA.constant("PCA_SQL", {
 })
 
 SelectPCA
-    .factory("AddressDataSourceSev", function ($http, $q, SERVER) {
+    .factory("AddressDataSourceSev", ["$http", "$q", "SERVER",function ($http, $q, SERVER) {
         return {
             getProvince: function () {
                 var defer = $q.defer();
@@ -61,10 +61,10 @@ SelectPCA
                 return defer.promise;
             }
         }
-    });
+    }]);
 
 SelectPCA
-    .factory("selectPCASev", function ($q, $rootScope,PCA_SQL,Util,VERSION,AddressDataSourceSev) {
+    .factory("selectPCASev", ["$q", "$rootScope","PCA_SQL","Util","VERSION","AddressDataSourceSev",function ($q, $rootScope,PCA_SQL,Util,VERSION,AddressDataSourceSev) {
 
         var selectPCADao = function () {  }
 
@@ -224,4 +224,4 @@ SelectPCA
 
         var pcaDao = new selectPCADao();
         return pcaDao;
-    })
+    }])

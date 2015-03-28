@@ -1,5 +1,5 @@
 PointMall
-    .factory("Util", function ($window, $q,$ionicLoading,$ionicHistory) {
+    .factory("Util", ["$window", "$q","$ionicLoading","$ionicHistory",function ($window, $q,$ionicLoading,$ionicHistory) {
         return {
 
             getSgObj: function (key) {
@@ -129,6 +129,6 @@ PointMall
                 return "";
             }
         }
-    });
+    }]);
 
 

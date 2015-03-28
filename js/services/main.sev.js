@@ -1,23 +1,22 @@
 PointMall
-    .factory("MallSev",function($http,$q,SERVER){
-
+    .factory("MallSev",["$http","$q","SERVER",function($http,$q,SERVER){
         var  MallSev  =  {
 
             //获得商品列表
             getProduct : function(token,queryTime){
                 var defer = $q.defer();
-               $http.post(SERVER.url.mall+"/credit/getProductionList",{
-                   "style" : "",
-                   "clientInfo" : {},
-                   "data" : {
-                       "token" : token,
-                       "queryTime" : queryTime
-                   }
-               }).success(function(res){
+                $http.post(SERVER.url.mall+"/credit/getProductionList",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "token" : token,
+                        "queryTime" : queryTime
+                    }
+                }).success(function(res){
                     defer.resolve(res);
-               }).error(function(error){
+                }).error(function(error){
                     defer.reject(error);
-               });
+                });
 
                 return defer.promise;
 
@@ -123,12 +122,10 @@ PointMall
                 return defer.promise;
             }
         };
-
         return MallSev;
-    })
+    }])
 
-    .factory("AddressSev",function($http,$q,SERVER){
-
+    .factory("AddressSev",["$http","$q","SERVER",function($http,$q,SERVER){
         var  AddressSev  =  {
             //获得地址
             getAddress : function(token){
@@ -170,12 +167,10 @@ PointMall
             }
 
         };
-
         return AddressSev;
+    }])
 
-    })
-
-.filter("exchangeStatus",function(){
+.filter("exchangeStatus",["$http","$q","SERVER",function(){
         return function(status,type) {
 
             //邮寄
@@ -208,6 +203,5 @@ PointMall
 
         }
 
-
- });
+ }]);
 

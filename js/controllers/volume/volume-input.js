@@ -5,6 +5,7 @@ PointMall.controller("VolumeInputCtrl",["$state","$rootScope","$ionicPopup","$sc
 
 
     $scope.goShop = function(post){
-        window.open(post.shopUrl);
+        //window.open(post.shopUrl);
+        alert("请在pc或手机浏览器内 兑换 ");
     }
 }]);

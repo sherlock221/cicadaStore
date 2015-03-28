@@ -4,7 +4,7 @@
  */
 
 SelectPCA
-    .factory("GeoLocationSev", function ($http,$q,SERVER) {
+    .factory("GeoLocationSev",["$http","$q","SERVER",function ($http,$q,SERVER) {
 
         if(!navigator.geolocation){
             alert('您的浏览器不支持使用HTML 5来获取地理位置服务');
@@ -45,9 +45,9 @@ SelectPCA
                 var defer = $q.defer();
 
                 navigator.geolocation.getCurrentPosition(function(val){
-                   defer.resolve(val)
+                    defer.resolve(val)
                 }, function(val){
-                   defer.reject(formatError(val));
+                    defer.reject(formatError(val));
                 }, {enableHighAccuracy:true, maximumAge:1000});
                 return defer.promise;
             },
@@ -61,19 +61,19 @@ SelectPCA
              */
             geocoder : function(lat,lon){
                 var defer = $q.defer();
-                    $http.post(SERVER.url.mall+"/address/getAddressByLatAndLong",{
-                        "style" : "",
-                        "clientInfo" : {},
-                        "data" : {
-                            "latitude" : lat,
-                            "longitude" : lon
-                        }
-                    }).success(function(res){
-                            defer.resolve(res);
-                        }).error(function(error){
-                            defer.reject(error);
-                        });
+                $http.post(SERVER.url.mall+"/address/getAddressByLatAndLong",{
+                    "style" : "",
+                    "clientInfo" : {},
+                    "data" : {
+                        "latitude" : lat,
+                        "longitude" : lon
+                    }
+                }).success(function(res){
+                    defer.resolve(res);
+                }).error(function(error){
+                    defer.reject(error);
+                });
                 return defer.promise;
             }
         }
-    });
+    }]);

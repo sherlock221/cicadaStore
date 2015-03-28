@@ -42,7 +42,8 @@
                         </ul>
 
                         <div class="text-center shopUrl">
-                            <a class="block" ng-href="{{post.electronic.shopUrl}}" >
+                            <!--<a class="block" ng-href="{{post.electronic.shopUrl}}" >-->
+                            <a class="block"  href="javascript:void(0)" ng-click="goShop(post);">
                                 <button class="button button-energized ca-bg">前往店铺</button>
                             </a>
                         </div>
@@ -70,7 +71,6 @@
                         </ul>
                     </div>
                 </div>
-
 
                 <!-- 话费 -->
                 <div ng-if="post.telephone">

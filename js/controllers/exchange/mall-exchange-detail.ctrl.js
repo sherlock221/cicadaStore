@@ -8,6 +8,11 @@ PointMall.controller("MallExchangeDetailCtrl",["$scope","$rootScope","$timeout",
     var exchangeId =  $stateParams.exchangeId;
 
 
+    $scope.goShop = function(post){
+        //window.open(post.shopUrl);
+        alert("请在pc或手机浏览器内 兑换 ");
+    }
+
     //获得详情
     var loadDetail = function(){
 

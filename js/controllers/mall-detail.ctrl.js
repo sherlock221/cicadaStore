@@ -1,16 +1,25 @@
-PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootScope","Util","AddressSev","MallSev",function($state,$stateParams,$scope,$rootScope,Util,AddressSev,MallSev){
+PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootScope","Util","AddressSev","MallSev","PROTOCOL",function($state,$stateParams,$scope,$rootScope,Util,AddressSev,MallSev,PROTOCOL){
    //获得当前选择的商品
    var  product = Util.getSgObj("product");
         console.log(product.comment);
         product.comment =  JSON.parse(product.comment);
         $scope.post = product;
 
-
      //兑换状态
      $scope.notExchange = true;
      $scope.isExchangeMsg = "不足兑换";
 
-    if($rootScope.user.credit   -  product.credit  >= 0){
+
+    //判断是否能兑换
+    if( product.status == PROTOCOL.product.status.no_start){
+        $scope.notExchange = true;
+        $scope.isExchangeMsg = "未开始";
+    }
+    else if(product.status == PROTOCOL.product.status.finish){
+        $scope.notExchange = true;
+        $scope.isExchangeMsg = "已结束";
+    }
+    else if($rootScope.user.credit   -  product.credit  >= 0){
         $scope.notExchange = false;
         $scope.isExchangeMsg = "兑换";
     }

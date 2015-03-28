@@ -1,6 +1,7 @@
 PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootScope","Util","AddressSev","MallSev",function($state,$stateParams,$scope,$rootScope,Util,AddressSev,MallSev){
    //获得当前选择的商品
    var  product = Util.getSgObj("product");
+        console.log(product.comment);
         product.comment =  JSON.parse(product.comment);
         $scope.post = product;
 
@@ -23,17 +24,24 @@ PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootSc
             case  1 :
                 checkAddress();
                 break;
+
+
             //自取
             case  2 :
-
+                alert("自取");
                 break;
+
             //电子卷
             case  3 :
                 checkBook();
                 break;
+
             //虚拟话费
             case  4 :
                 checkVirtual();
+                break;
+            default :
+                alert("无");
                 break;
         }
     }

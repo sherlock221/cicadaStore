@@ -196,7 +196,7 @@ PointMall.run(function ($ionicPlatform) {
     //版本控制
     .constant("VERSION",{
 
-        URL_VERSION : "4.4",
+        URL_VERSION : "4.7",
         ADDRESS_SOURCE_VERSION : "2.2"
 
     });

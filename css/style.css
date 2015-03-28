@@ -342,8 +342,14 @@ form .form-text {
     margin: 0;
     margin-bottom: 5px; }
   .mall-icon .mail-base {
-    display: inline-block;
+    display: block;
     text-align: left; }
+  .mall-icon .mail-base-name {
+    padding: 0 10px; }
+  .mall-icon .mail-icon-setting {
+    text-align: left;
+    width: 100px;
+    display: inline-block; }
 
 .mail-point {
   font-size: 16px;

@@ -1,6 +1,6 @@
 PointMall.controller("AddressListCtrl",["$scope","$rootScope","Util","MallSev",function ($scope, $rootScope, Util, MallSev) {
 
-    var product = Util.getSgObj("product");
+    var product;
     var address;
 
 
@@ -8,8 +8,10 @@ PointMall.controller("AddressListCtrl",["$scope","$rootScope","Util","MallSev",f
     $scope.$on("$ionicView.beforeEnter", function () {
 
         $rootScope.scrollTopByName("addressListScroll");
-
         console.log("address list  before enter..");
+
+
+        product = Util.getSgObj("product");
         address = Util.getLgObj("address");
 
         $scope.posts = address;
@@ -18,6 +20,8 @@ PointMall.controller("AddressListCtrl",["$scope","$rootScope","Util","MallSev",f
         }
 
     });
+
+
 
 
 

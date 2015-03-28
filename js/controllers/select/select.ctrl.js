@@ -22,9 +22,12 @@ var SelectPCA = angular.module("selectPCA",[])
                       $scope.isGeoLoading = false;
                   })
                   .then(function(res){
-                      if(res.rtnCode == "0000000"){
+                      if(res.rtnCode && res.rtnCode == "0000000"){
                           var  address =  JSON.parse(res.bizData.addressJson).result.addressComponent;
                           $scope.fm.geoAddress = address.province + " "+address.city + " "+  address.district;
+                      }
+                      else if(!res.rtnCode){
+
                       }
                       else{
                           $rootScope.alert("",res.msg);

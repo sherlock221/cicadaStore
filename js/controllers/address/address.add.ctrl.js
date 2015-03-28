@@ -41,10 +41,35 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
 
     }
 
+    //检查地址
+    var checkAddress = function(fm){
+        if(fm.street.length >  50){
+            $rootScope.alert("","收获地址过长！小于50个字");
+            return false;
+        }
+        else if(fm.phone.length > 11){
+            $rootScope.alert("","请输入正确的手机号码!");
+            return false
+        }
+        else if(fm.userName.length > 4){
+            $rootScope.alert("","请输入正确的收货人姓名!");
+            return false;
+        }
+        return true;
+
+    }
 
     //添加地址
     $scope.addAddress = function(){
+
         $scope.isSubmit = true;
+
+        //检查字段
+        if(!checkAddress($scope.fm)){
+            $scope.isSubmit = false;
+            return;
+        }
+
 
         var temp = $scope.fm.baseAddress.split(" ");
         var provice = temp[0];

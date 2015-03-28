@@ -187,7 +187,7 @@ PointMall.run(function ($ionicPlatform) {
 //            mall: "http://172.16.130.218:8086/credit",
             mall: "http://10.10.68.11:10000/credit",
 //            mall: "http://imzhiliao.com:10000/credit",
-//            mall: "./data",
+//            mall: "./data" ,
 //            mall: "/credit",
             resource : "./data"
         }
@@ -196,7 +196,7 @@ PointMall.run(function ($ionicPlatform) {
     //版本控制
     .constant("VERSION",{
 
-        URL_VERSION : "5.1",
+        URL_VERSION : "5.3",
         ADDRESS_SOURCE_VERSION : "2.2"
 
     });

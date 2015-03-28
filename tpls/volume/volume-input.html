@@ -3,7 +3,8 @@
 <ion-view  cache-view="false" view-title="兑换成功">
 
     <div class="bar bar-header bar-positive  ">
-        <button class="button button-icon icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.detail');">  </button>
+        <!--<button class="button button-icon icon ion-ios7-arrow-back"    ng-click="$root.backToView('mall.detail');">  </button>-->
+        <button class="button button-icon icon ion-ios7-arrow-back"    ng-click="$root.back();">  </button>
         <h1 class="title">兑换成功</h1>
     </div>
 
@@ -24,9 +25,9 @@
                </div>
 
                 <div class="volume-forword">
-                    <a ng-href="{{post.shopUrl}}" class="color-blue">前往店铺</a>
+                    <!--<a ng-href="{{post.shopUrl}}" class="color-blue" >前往店铺</a>-->
+                    <a  class="color-blue" ng-click="goShop(post);">前往店铺</a>
                 </div>
-
 
                 <div class="text-center m60">
                     <button class="button button-energized ca-bg" ng-click="$root.go('mall.exchange')">确定</button>

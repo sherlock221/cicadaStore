@@ -62,6 +62,7 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
             load($rootScope.token, $scope.fm.queryTime).then(function(res){
                 $scope.$broadcast('scroll.refreshComplete');
                 if(res.rtnCode == "0000000"){
+                    $scope.fm.queryTime = res.bizData[res.bizData.length-1].createDate;
                     $scope.posts = res.bizData;
 
                     if(res.bizData == 0){

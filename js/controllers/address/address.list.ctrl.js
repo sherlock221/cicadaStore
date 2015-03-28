@@ -10,7 +10,6 @@ PointMall.controller("AddressListCtrl",["$scope","$rootScope","Util","MallSev",f
         $rootScope.scrollTopByName("addressListScroll");
         console.log("address list  before enter..");
 
-
         product = Util.getSgObj("product");
         address = Util.getLgObj("address");
 

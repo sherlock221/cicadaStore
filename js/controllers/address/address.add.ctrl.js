@@ -12,7 +12,6 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
 //    $scope.isSubmit = false;
 
 
-
     //检测视图进入
     $scope.$on("$ionicView.beforeEnter",function(){
 
@@ -43,6 +42,11 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
 
     //检查地址
     var checkAddress = function(fm){
+
+        //中文验证
+        var chineseReg = /^[\u4e00-\u9fa5]+$/i;
+
+
         if(fm.street.length >  50){
             $rootScope.alert("","收获地址过长！小于50个字");
             return false;
@@ -51,10 +55,15 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
             $rootScope.alert("","请输入正确的手机号码!");
             return false
         }
-        else if(fm.userName.length > 4){
+        else if(fm.userName.length < 2 ||  fm.userName.length > 5){
             $rootScope.alert("","请输入正确的收货人姓名!");
             return false;
         }
+        else if(!chineseReg.test(fm.userName)){
+            $rootScope.alert("","请输入中文!");
+            return false;
+        }
+
         return true;
 
     }
@@ -109,9 +118,9 @@ PointMall.controller("AddressAddCtrl",["$scope","$rootScope","Util","AddressSev"
             $rootScope.backToView('mall.address.list');
         }
         else{
-            $rootScope.backToView('mall.detail');
+//            $rootScope.backToView('mall.detail');
+            $rootScope.back();
         }
-
 
 
     }

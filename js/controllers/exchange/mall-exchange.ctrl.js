@@ -28,9 +28,10 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
                 if(res.bizData.length <= 0){
                     $scope.isMore = false;
                 }
-                else{
+                else
+                {
                     $scope.posts = $scope.posts.concat(res.bizData);
-                    $scope.fm.queryTime = $scope.posts[$scope.posts.length-1].createDate;
+                    $scope.fm.queryTime = res.bizData[res.bizData.length-1].createDate;
                     $scope.$broadcast('scroll.infiniteScrollComplete');
                 }
             }
@@ -65,6 +66,10 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
 
                     if(res.bizData == 0){
                         $scope.isNotProduct = true;
+                    }
+                    else{
+                        //从新加载
+                        $scope.isMore = true;
                     }
                 }
                 else{

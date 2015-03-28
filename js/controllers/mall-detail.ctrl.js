@@ -49,25 +49,26 @@ PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootSc
     //检查地址
     var  checkAddress = function(){
        var  address = Util.getLgObj("address");
-       if(address){
-           $rootScope.go("mall.address.list");
-       }
-       else{
+//       if(address){
+//           $rootScope.go("mall.address.list");
+//       }
+//       else{
            //拉取address
            $rootScope.loading(true);
-
            AddressSev.getAddress($rootScope.token).then(function(res){
                $rootScope.loading(false);
 
                if(res.bizData.length > 0){
+
                    //更新本地缓存
                    Util.setLgObj("address",res.bizData);
-
 
                    //跳转list
                    $rootScope.go("mall.address.list");
                }
                else{
+
+                   Util.removeLg("address");
 
                    //跳转添加
                    $rootScope.go("mall.address.add");
@@ -77,8 +78,7 @@ PointMall.controller("MallDetailCtrl",["$state","$stateParams","$scope","$rootSc
                $rootScope.loading(false);
            });
 
-         ;
-       }
+//       }
 
 
     }

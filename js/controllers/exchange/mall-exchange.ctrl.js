@@ -85,7 +85,6 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
             });
 
 
-
     }
 
     //去兑换详情

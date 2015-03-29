@@ -185,8 +185,8 @@ PointMall.run(function ($ionicPlatform) {
     .constant('SERVER', {
         url: {
 //            mall: "http://172.16.130.218:8086/credit",
-            mall: "http://10.10.68.11:10000/credit",
-//            mall: "http://imzhiliao.com:10000/credit",
+//            mall: "http://10.10.68.11:10000/credit",
+            mall: "http://imzhiliao.com:10000/credit",
 //            mall: "./data" ,
 //            mall: "/credit",
             resource : "./data"

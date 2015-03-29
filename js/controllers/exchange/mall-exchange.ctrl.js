@@ -23,6 +23,7 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
     //加载更多 满足一屏 就加载
     $scope.loadMore = function(){
         console.log("load more...");
+        $timeout(function(){
         load($rootScope.token, $scope.fm.queryTime).then(function(res){
             console.log("load...data");
             if(res.rtnCode == "0000000"){
@@ -41,8 +42,11 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
                 console.error("error");
             }
 
+
         },function(err){
         });
+
+        },4000);
 
 
     }
@@ -50,7 +54,9 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
 
     //加载数据
     var load = function(token,queryTime){
+
         return MallSev.getExchange(token,queryTime);
+
     }
 
 
@@ -82,7 +88,7 @@ PointMall.controller("MallExchangeCtrl",["$scope","$ionicScrollDelegate","$rootS
             });
 
 
-        },0);
+        },4000);
 
     }
 
